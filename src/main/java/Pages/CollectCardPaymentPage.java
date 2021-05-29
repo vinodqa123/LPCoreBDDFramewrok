@@ -31,13 +31,16 @@ public class CollectCardPaymentPage extends TestBase {
 	WebElement Speciality;
 	@FindBy(xpath="//a[contains(text(),'Heartland EMail')]")
 	WebElement ProviderName;
-	@FindBy(xpath="//body/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/button[1]")
+	@FindBy(xpath="//body/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/button[1]")
 	WebElement PayNowBtn;
 	
 	public CollectCardPaymentPage() throws IOException{
 	
 		PageFactory.initElements(driver,this);
 		
+	}
+	public void openPaymentLink(String link) {
+		driver.get(link);		
 	}
 	public void enterCardNumber(String cardNumber1) throws InterruptedException {
 		Thread.sleep(3000);
@@ -81,12 +84,15 @@ public class CollectCardPaymentPage extends TestBase {
 	public void PayNowBtn() throws InterruptedException {
 		Thread.sleep(2000);
 		//		Reporter.log("Card details entered successfully!");
-				driver.findElement(By.xpath("//body/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/button[1]")).click();
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/button[1]")));
+				PayNowBtn.click();
+				Thread.sleep(3000);
 	}
 	
 	public String getTransactionID() throws InterruptedException {
 		Thread.sleep(3000);
-		WebElement transId=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[10]/td[2]"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[10]/td[2]")));
+		WebElement transId=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/table[1]/tbody[1]/tr[10]/td[2]"));
 		String TransactionId=transId.getText();
 		return TransactionId;
 	}

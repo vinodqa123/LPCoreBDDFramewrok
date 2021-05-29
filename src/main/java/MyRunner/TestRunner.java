@@ -13,7 +13,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/main/java/Features/LPCore.feature"
+		features="src/main/java/Features"
 		,glue= {"stepDefinitions"}
 		,monochrome=true
 		,format = {
@@ -23,7 +23,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "rerun:target/cucumber-reports/rerun.txt"
         },
 		plugin = "json:target/cucumber-reports/CucumberTestReport.json"
-		,dryRun=false
+		,dryRun=true
+		//tags = "@smoke"
 	)
 public class TestRunner {
 	private TestNGCucumberRunner testNGCucumberRunner;

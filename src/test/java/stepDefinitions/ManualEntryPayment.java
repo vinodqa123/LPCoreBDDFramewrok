@@ -43,7 +43,7 @@ public class ManualEntryPayment extends TestBase {
 	public void login_To_Application() throws InterruptedException, IOException {		
 		loginPage=new LoginPage();
 		Thread.sleep(3000);
-		loginPage.login("heartlandemail","Test@1234");
+		loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 		System.out.println("User is aleady on Home Page");
 		Thread.sleep(3000);
 	}

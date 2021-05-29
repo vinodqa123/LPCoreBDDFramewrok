@@ -116,7 +116,8 @@ public String getCollectCardPaymentlink(String RefNo) throws InterruptedExceptio
 		//			Reporter.log("CollectCard Payment url found as :"+FinalURL);
 											
 			}else {
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/span[1]")));
+																		//			/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/span[1]
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/span[1]")));
 				WebElement GetPaymentURL=driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/span[1]"));
 				String PaymentUrl=GetPaymentURL.getText();
 				String separator =":";

@@ -41,25 +41,25 @@ public class TestBase implements IReporter{
 	public static String browsername="chrome";
 	public static ExtentReports extent;
 	public static ExtentTest test;
-	
-	
-	
+	public static String congigFilePath="C:\\Users\\sys\\eclipse-workspace\\LPCoreBDDFramework\\src\\main\\java\\Config\\config.properties";
+
 	public TestBase() throws IOException { 
 		
-	/*	try {		
+		try {		
+			
 			prop=new Properties();
-			ip= new FileInputStream("Users\\sys\\eclipse-workspace\\LPCoreBDDFramework\\src\\main\\java\\Config\\config.properties");
-			prop.load(ip);
+			FileInputStream ip= new FileInputStream(congigFilePath);		
+			prop.load(ip);	
 		}
 		catch(IOException e) {
 			e.printStackTrace();		
 			
 		}
-		*/
+		
 	} 
 	public static void browserInitialization() throws InterruptedException {
-		//String browsername=prop.getProperty("browser");
-		if(browsername.equals("chrome")) {
+		String browsername=prop.getProperty("browser");
+		if(browsername.equals(browsername)) {
 			System.setProperty("webdriver.chrome.driver","D:\\Vinod\\Eclipse\\ChromDriver Version 90\\chromedriver.exe"); 
 			driver=new ChromeDriver();
 			Thread.sleep(3000);
