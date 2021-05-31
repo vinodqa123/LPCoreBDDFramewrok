@@ -13,7 +13,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/main/java/Features"
+		features="src/main/java/Features/ManualEntry.feature"
 		,glue= {"stepDefinitions"}
 		,monochrome=true
 		,format = {
