@@ -1,4 +1,5 @@
 Feature: LP Core functional Regression test
+ @sanity
  #Manual Entry Payment feature
   Scenario Outline: Verify Manual Entry Payment with different type of cards(VISA/MasterCard/Amex/Discover..)
     Given User is already on Home Page
@@ -12,7 +13,7 @@ Feature: LP Core functional Regression test
     | ReferenceNumber   | firstname | lastname |phone |Amount |cardNumber |address|state|city|cvv|
     | 1111-23           | John      | smith    |9548406651 |2 |4012002000060016 |Madhapur|Hyderabad|Telangana|123|
  
-        
+ @sanity        
   Scenario Outline: Verify Partial refund for Manual Entry Transaction
   	Given User is already on Home Page
    	When  Select payment type as Manual Entry

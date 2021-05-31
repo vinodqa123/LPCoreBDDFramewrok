@@ -23,8 +23,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
                 "rerun:target/cucumber-reports/rerun.txt"
         },
 		plugin = "json:target/cucumber-reports/CucumberTestReport.json"
-		,dryRun=false
-		//tags = "@smoke"
+		,dryRun=false,
+		tags = "@sanity"
 	)
 public class TestRunner {
 	private TestNGCucumberRunner testNGCucumberRunner;
