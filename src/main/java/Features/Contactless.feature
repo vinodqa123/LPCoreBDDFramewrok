@@ -71,7 +71,7 @@ Feature: Contactless Payment feature
     Examples:
    	 | ReferenceNumber   | firstname | lastname |phone_Email |Amount |cardNumber |address|state|city|cvv|
      | 5234656-23           | John      | smith    |9548406651 |3 |4012002000060016 |Madhapur|Hyderabad|Telangana|123|
-   @smoke  
+    
  Scenario Outline: Verify Refund Transaction for above step Contactless Payment 
    Given CA User is already on Home Page
     When  CA Select payment type as Contactless
@@ -92,7 +92,7 @@ Feature: Contactless Payment feature
     Examples:
    	 | ReferenceNumber   | firstname | lastname |phone_Email |Amount |cardNumber |address|state|city|cvv|
      | 12123-23          | John      | smith    |9548406651 |3 |5473500000000014 |Madhapur|Hyderabad|Telangana|123|
-   @smoke  
+   
 Scenario Outline: Verify Refund Transaction for above step Contactless Payment 
    Given CA User is already on Home Page
     When  CA Select payment type as Contactless
