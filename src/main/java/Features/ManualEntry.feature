@@ -26,7 +26,7 @@ Feature: LP Core functional Regression test
     
     Examples:
     | ReferenceNumber   | firstname | lastname |phone |Amount |cardNumber |address|state|city|cvv|
-    | 2219122           | John      | smith    |9548406651 |2 |4012002000060016 |Madhapur|Hyderabad|Telangana|123|
+    | 11332           | John      | smith    |9548406651 |2 |4012002000060016 |Madhapur|Hyderabad|Telangana|123|
     
     @sanity
     Scenario Outline: Verify Full refund for Manual Entry Transaction
@@ -42,7 +42,7 @@ Feature: LP Core functional Regression test
     
     Examples:
     | ReferenceNumber   | firstname | lastname |phone |Amount |cardNumber |address|state|city|cvv|
-    | 41095452           | John      | smith    |9548406651 |2 |4012002000060016 |Madhapur|Hyderabad|Telangana|123|
+    | 1212           | John      | smith    |9548406651 |2 |4012002000060016 |Madhapur|Hyderabad|Telangana|123|
   
       
     Scenario Outline: Verify Refund void for Manual Entry Transaction
