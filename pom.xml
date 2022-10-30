@@ -18,79 +18,60 @@
   </properties>
 
   <dependencies>
-	  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-	<dependency>
-	    <groupId>org.testng</groupId>
-	    <artifactId>testng</artifactId>
-	    <version>7.4.0</version>
-	    <scope>compile</scope>
-	</dependency>
-	  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
-	<dependency>
-	    <groupId>info.cukes</groupId>
-	    <artifactId>cucumber-testng</artifactId>
-	    <version>1.2.5</version>
-	</dependency>
-  
-	<dependency>
-	    <groupId>info.cukes</groupId>
-	    <artifactId>cucumber-java</artifactId>
-	    <version>1.2.5</version>
-	</dependency>
-	
- 
-		<dependency>
-	    <groupId>info.cukes</groupId>
-	    <artifactId>cucumber-junit</artifactId>
-	    <version>1.2.5</version>
-	</dependency>
-	
-
-	<dependency>
-	    <groupId>info.cukes</groupId>
-	    <artifactId>cucumber-jvm-deps</artifactId>
-	    <version>1.0.5</version>
-	    <scope>provided</scope>
-	</dependency>
-	
-
-	<dependency>
-	    <groupId>net.masterthought</groupId>
-	    <artifactId>cucumber-reporting</artifactId>
-	    <version>5.0.2</version>
-	</dependency>
-	
-
-	<dependency>
-	    <groupId>info.cukes</groupId>
-	    <artifactId>gherkin</artifactId>
-	    <version>2.12.2</version>
-	    <scope>provided</scope>
-	</dependency>
-	
-<!-- 
-	<dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>4.13</version>
-	</dependency>
-	-->
-
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
-	    <version>3.141.59</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+	    <version>4.4.0</version>
+	</dependency><!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 	<dependency>
-	    <groupId>com.relevantcodes</groupId>
-	    <artifactId>extentreports</artifactId>
-	    <version>2.41.2</version>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>7.8.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>gherkin</artifactId>
+	    <version>24.0.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/tech.grasshopper/extent-pdf-report -->
+	<dependency>
+	    <groupId>tech.grasshopper</groupId>
+	    <artifactId>extent-pdf-report</artifactId>
+	    <version>2.7.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>7.8.0</version>
+	    <scope>test</scope>
 	</dependency>
 	
-  
-  </dependencies>
+	<dependency>
+		<groupId>com.vimalselvam</groupId>
+		<artifactId>cucumber-extentsreport</artifactId>
+		<version>3.0.2</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.aventstack</groupId>
+		<artifactId>extentreports</artifactId>
+		<version>3.1.2</version>
+	</dependency>
 
+
+
+	
+    
+  </dependencies>
   <build>
     <plugins>
       <plugin>
